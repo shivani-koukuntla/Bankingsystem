@@ -7,6 +7,9 @@
    </head>
    
 <body>
+
+               <h1> HELLO  </h1>
+            <h2> WELCOME TO HOMEPAGE !</h2>
 <?php
 session_start();
 $var1=$_SESSION['fromcustomer'];
@@ -58,7 +61,7 @@ if ($result = $conn->query($query)) {
                      SET currentbalance =  '$var6'
                           WHERE name = '$var2'";
                           if (mysqli_query($conn, $sql2)) {
-                            echo "Transaction Sucessful";
+                            echo "<script>alert('Transaction successful');</script>";
                           } else {
                             echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
                           }
@@ -68,7 +71,7 @@ if ($result = $conn->query($query)) {
 
         }
         else{
-          echo "Amount is insufficient Transaction cannot happen.'<br>'";
+          echo "Amount is insufficient Transaction cannot happen.<br>";
         }
   }
       
